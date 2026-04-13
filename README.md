@@ -1,61 +1,73 @@
-# Baliz Parmak - Erişilebilir Eğitim Platformu
+# React + TypeScript + Vite
 
-## Proje Özeti
-Çukurova Üniversitesi Baliz Parmak Kulübü'nün resmi web sitesi ve erişilebilir eğitim platformu. Site hem kulübün tanıtımı, etkinlikleri ve duyurularını barındırır hem de görme engelli bireylerin sınav hazırlık sürecinde kullanabileceği erişilebilir bir eğitim modülü sunar. KPSS ve YKS sınavlarına yönelik sesli ders ve deneme içerikleri sağlar.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Tech Stack
-- **Frontend:** React 18+ (Vite), TypeScript, React Router v6
-- **Backend:** .NET Core 8 (Web API)
-- **Database:** PostgreSQL
-- **UI/Styling:** Tailwind CSS + headless UI bileşenleri (erişilebilirlik öncelikli)
-- **State Management:** Zustand (hafif, basit)
-- **Auth:** JWT tabanlı kimlik doğrulama
+Currently, two official plugins are available:
 
-## Proje Yapısı
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-balizparmak/
-├── client/          # React frontend (Vite)
-│   ├── src/
-│   │   ├── components/    # Yeniden kullanılabilir bileşenler
-│   │   ├── pages/         # Sayfa bileşenleri
-│   │   ├── hooks/         # Custom React hooks
-│   │   ├── services/      # API çağrıları
-│   │   ├── stores/        # Zustand store'ları
-│   │   ├── utils/         # Yardımcı fonksiyonlar
-│   │   ├── assets/        # Statik dosyalar (ses, görsel)
-│   │   └── styles/        # Global stiller
-│   └── public/
-├── server/          # .NET Core backend (sonra eklenecek)
-└── docs/            # Proje dökümanları
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-## Temel Özellikler
-1. **Kullanıcı Sistemi:** Login/Register, engelli belgesi yükleme
-2. **Sınav Seçimi:** KPSS/YKS hedef belirleme ve doğrulama
-3. **Sesli İçerik:** Ders dinleme, hız ayarı (0.75x-1.5x), uyku zamanlayıcısı
-4. **Deneme Sistemi:** Sesli sorular, şık seçimi, kaldığı yerden devam
-5. **Sesli Arama:** Mikrofon ile site içi arama
-6. **Admin Paneli:** Belge onay, içerik yükleme, istatistik
-7. **Erişilebilirlik:** WCAG 2.1 uyumlu, aria-labels, focus visible, kontrast 4.5:1+
-8. **Yasal:** KVKK aydınlatma metni, kullanım sözleşmesi
-9. **Destek:** SSS, hata bildir
-
-## Erişilebilirlik Kuralları (KRİTİK)
-- Tüm interaktif elemanlar TAB ile gezilmeli
-- Her görsel eleman aria-label içermeli
-- Arka plan/metin kontrast oranı minimum 4.5:1
-- Focus durumunda belirgin çerçeve görünmeli
-- Tüm uyarılar sesli olarak da verilmeli
-- Screen reader uyumluluğu zorunlu
-
-## Konvansiyonlar
-- Dil: TypeScript (strict mode)
-- Component isimlendirme: PascalCase
-- Dosya isimlendirme: PascalCase (bileşenler), camelCase (utils/hooks)
-- CSS: Tailwind utility-first yaklaşım
-- Commit mesajları: Conventional commits (feat:, fix:, chore:)
-
-## Workflow Kuralları
-- Kapsamlı görevlerde önce `tasks/todo.md`'ye plan yaz, onay al, sonra başla
-- Kullanıcı düzeltmelerinden sonra `tasks/lessons.md`'ye kalıbı kaydet
-- Bir görevi "bitti" demeden önce çalıştığını kanıtla (test, log, demo)
