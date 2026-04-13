@@ -1,0 +1,166 @@
+export interface Member {
+  id: number
+  isim: string
+  pozisyon: string
+  foto: string
+  linkedin: string
+  hiyerarsi: number
+  sira_no: number
+}
+
+// TODO: Supabase API'ye bağlanınca bu statik veri kaldırılacak
+export const members: Member[] = [
+  {
+    id: 68,
+    isim: 'Ömer Öksüzaşıkı',
+    pozisyon: 'Kulüp Başkanı',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951168421.jpg',
+    linkedin: 'https://www.linkedin.com/in/%C3%B6mer-%C3%B6ks%C3%BCza%C5%9F%C4%B1k%C4%B1-b364b9329/',
+    hiyerarsi: 1,
+    sira_no: 1,
+  },
+  {
+    id: 69,
+    isim: 'Kevser Yayuspayı',
+    pozisyon: 'Başkan Yardımcısı',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951227928.jpg',
+    linkedin: 'https://www.linkedin.com/in/kevser-yayuspay%C4%B1-59aa29346/',
+    hiyerarsi: 2,
+    sira_no: 1,
+  },
+  {
+    id: 70,
+    isim: 'Furkan Selim Gönç',
+    pozisyon: 'Sayman & İdari İşler Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951268137.jpg',
+    linkedin: 'https://www.linkedin.com/in/furkan-selim-g%C3%B6n%C3%A7-a832b430a/',
+    hiyerarsi: 2,
+    sira_no: 2,
+  },
+  {
+    id: 71,
+    isim: 'Beyazıt Can Eytemiş',
+    pozisyon: 'Organizasyon Kurul Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951351200.jpg',
+    linkedin: 'https://www.linkedin.com/in/beyaz%C4%B1t-can-eytemi%C5%9F-a49853340/',
+    hiyerarsi: 3,
+    sira_no: 1,
+  },
+  {
+    id: 72,
+    isim: 'Umut Çabuk',
+    pozisyon: 'Organizasyon Kurul Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951390614.jpg',
+    linkedin: 'https://www.linkedin.com/in/umut-%C3%A7abuk-75a792342/',
+    hiyerarsi: 3,
+    sira_no: 2,
+  },
+  {
+    id: 74,
+    isim: 'Berk Ekinci',
+    pozisyon: 'Teknik Ekipman Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951521145.jpg',
+    linkedin: 'https://www.linkedin.com/in/berk-ekinci-260398389/',
+    hiyerarsi: 3,
+    sira_no: 4,
+  },
+  {
+    id: 75,
+    isim: 'Toprak Çelebi',
+    pozisyon: 'Ulaşım ve Transfer Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951566827.jpg',
+    linkedin: 'https://www.linkedin.com/in/toprak-%C3%A7elebi-31a8572a3/',
+    hiyerarsi: 3,
+    sira_no: 5,
+  },
+  {
+    id: 76,
+    isim: 'Zübeyde Akça',
+    pozisyon: 'İkram & Catering Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951611021.jpg',
+    linkedin: 'https://www.linkedin.com/in/z%C3%BCbeyde-ak%C3%A7a-1a6a0b371/',
+    hiyerarsi: 3,
+    sira_no: 6,
+  },
+  {
+    id: 78,
+    isim: 'Oruç Nur Açıkel',
+    pozisyon: 'Eğitim ve Seminer Yürütme Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1760033589427.jpeg',
+    linkedin: 'https://www.linkedin.com/in/nur-a%C3%A7%C4%B1kel-5a6b71386/',
+    hiyerarsi: 3,
+    sira_no: 8,
+  },
+  {
+    id: 81,
+    isim: 'Halise Akkurt',
+    pozisyon: 'Sosyal Medya Kurul Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951873605.jpg',
+    linkedin: 'https://www.linkedin.com/in/halise-akkurt-975b152a5/',
+    hiyerarsi: 4,
+    sira_no: 1,
+  },
+  {
+    id: 82,
+    isim: 'Maide Benli',
+    pozisyon: 'Etkileşim ve Takip Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951916082.jpg',
+    linkedin: 'https://www.linkedin.com/in/maide-benli-1257a8343/',
+    hiyerarsi: 4,
+    sira_no: 2,
+  },
+  {
+    id: 83,
+    isim: 'Şevval Işık',
+    pozisyon: 'Grafik ve İçerik Üretim Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951963812.jpg',
+    linkedin: 'https://www.linkedin.com/in/%C5%9Fevval-i%C5%9F%C4%B1k-4721002b9/',
+    hiyerarsi: 4,
+    sira_no: 3,
+  },
+  {
+    id: 84,
+    isim: 'Kardelen Küsgün',
+    pozisyon: 'Grafik ve İçerik Üretim Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759952007351.jpg',
+    linkedin: 'https://www.linkedin.com/in/kardelen-k-6a2b12326/',
+    hiyerarsi: 4,
+    sira_no: 4,
+  },
+  {
+    id: 85,
+    isim: 'Necati Dilek',
+    pozisyon: 'Sponsorluk Kurul Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759952053616.jpg',
+    linkedin: 'https://www.linkedin.com/in/necati-dilek-19b693296/',
+    hiyerarsi: 5,
+    sira_no: 1,
+  },
+  {
+    id: 87,
+    isim: 'İpek Baykara',
+    pozisyon: 'Sponsorluk Görüşme ve Takip Sorumlusu',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759952165005.jpg',
+    linkedin: 'https://www.linkedin.com/in/ipek-b-8a42b42b9/',
+    hiyerarsi: 5,
+    sira_no: 3,
+  },
+  {
+    id: 88,
+    isim: 'Sedef Mert',
+    pozisyon: 'Yazman (Resmi Kayıt Sorumlusu)',
+    foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759952220062.jpg',
+    linkedin: 'https://www.linkedin.com/in/sedef-mert-b16396372/',
+    hiyerarsi: 6,
+    sira_no: 1,
+  },
+]
+
+export const hierarchyLabels: Record<number, string> = {
+  1: 'Başkanlık',
+  2: 'Yönetim',
+  3: 'Organizasyon Kurulu',
+  4: 'Sosyal Medya Kurulu',
+  5: 'Sponsorluk Kurulu',
+  6: 'Sekreterlik',
+}
