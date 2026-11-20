@@ -32,7 +32,7 @@ export default function LibraryPage() {
                 id="library-heading"
                 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl leading-tight"
               >
-                OZAN'IN IŞIĞINDA,{' '}
+                OZAN'IN HAYALİNDE,{' '}
                 <span className="text-amber-400">BİLGİYE ENGELSİZ ERİŞİM</span>
               </h1>
               <p className="mt-6 text-lg text-slate-300 leading-relaxed">
@@ -95,18 +95,27 @@ export default function LibraryPage() {
                 />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">
-                Bir İz Bırakmak
+                Bir İZ Bırakmak
               </h3>
-              <p className="text-amber-100 leading-relaxed">
-                Ozan Bayır Erişilebilir Dijital Kütüphanesi — BALİZ Parmak
-                Tarafından Hayata Geçirildi. Neden Yaptık'ının daimi kahraman
-                olduğunu hissettirmek istiyoruz. Bilgi Bırakmak, onu bir
-                karakalem tonlarında ölümsüz olan dijital kütüphanede kişisel
-                hikaye yazısını bir sürece yaptırmak.
-              </p>
+              <div className="space-y-3 text-amber-50 leading-relaxed">
+                <p className="font-semibold text-white">
+                  Ozan Bayır Erişilebilir Dijital Kütüphanesi
+                </p>
+                <p className="italic">Bir Hayalin İzinde, Erişilebilir Bir Geleceğe…</p>
+                <p>
+                  Ozan Bayır’ın herkes için erişilebilir bilgi hayali, BALİZ Parmak
+                  Kulübü’ndeki ekip arkadaşları tarafından sahiplenilerek
+                  geliştirilmiş ve kalıcı bir projeye dönüştürülmüştür.
+                </p>
+                <p>
+                  Bu kütüphane, yalnızca dijital bir bilgi kaynağı değil; Ozan’ın
+                  hayallerini yaşatma, onun bıraktığı izi geleceğe taşıma ve
+                  bilgiye erişimde fırsat eşitliği sağlama çabamızın bir sonucudur.
+                </p>
+              </div>
             </div>
 
-            {/* Ozan'ın Mirası */}
+            {/* BALİZ Hayali */}
             <div
               className="relative rounded-2xl overflow-hidden shadow-xl"
               style={{
@@ -122,16 +131,45 @@ export default function LibraryPage() {
 
               <div className="relative p-8 flex flex-col h-full min-h-[22rem]">
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  Ozan'ın Mirası
+                  BALİZ Hayali
                 </h3>
-                <p className="text-slate-200 leading-relaxed text-sm mb-auto">
-                  Ozan Bayır Erişilebilir Dijital Kütüphanesi — BALİZ Parmak
-                  Tarafından Hayata Geçirildi. Dorulanının mireninden bir oluşum
-                  mirasan yapılmaktadır.
-                </p>
+                <div className="space-y-3 text-slate-200 leading-relaxed text-sm mb-auto">
+                  <p className="font-semibold text-white uppercase tracking-wide">
+                    Ozan Bayır’ın Anısına
+                  </p>
+                  <p className="italic">
+                    Bir Hayalin, Bir Emeğin ve Kalıcı Bir Mirasın Hikâyesi
+                  </p>
+                  <p>
+                    Ozan Bayır, BALİZ Parmak Kulübü’nün kurucularından biri olarak,
+                    Adıyaman’da başlayan kuruluş sürecinden itibaren kulübün
+                    gelişimine büyük emek vermiştir.
+                  </p>
+                  <p>
+                    Yıllar boyunca sponsorluk çalışmalarından organizasyon
+                    süreçlerine kadar birçok alanda sorumluluk üstlenmiş; kulübün
+                    büyümesi, güçlenmesi ve daha fazla insana ulaşması için
+                    özveriyle çalışmıştır.
+                  </p>
+                  <p>
+                    6 Şubat’ta hayatını kaybeden Ozan Bayır’ın bilgiye erişim
+                    konusundaki hayali, ekip arkadaşları tarafından geliştirilerek
+                    Ozan Bayır Erişilebilir Dijital Kütüphanesi adıyla hayata
+                    geçirilmiştir.
+                  </p>
+                  <p>
+                    Bu proje, yalnızca bir kütüphane değil; bilgiye
+                    erişilebilecek, öğrenmenin ve kendini geliştirmenin
+                    destekleneceği bir alan olacaktır.
+                  </p>
+                  <p>
+                    Ozan Bayır’ı saygı, rahmet ve minnetle anıyoruz. Bıraktığı iz,
+                    gerçekleştirdiğimiz her güzel çalışmada yaşamaya devam edecek.
+                  </p>
+                </div>
 
                 {/* Video play button */}
-                <div className="mt-4 flex justify-center">
+                <div className="mt-6 flex justify-center">
                   <button
                     type="button"
                     className="flex items-center justify-center h-16 w-16 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 transition-colors"
@@ -158,13 +196,12 @@ export default function LibraryPage() {
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
             {sponsors.map((s) => (
               <div
-                key={s.name + s.role}
+                key={s}
                 className="glass rounded-2xl p-6 text-center shadow-lg"
               >
-                <div className="flex h-14 items-center justify-center mb-3">
-                  <span className="text-lg font-bold text-white">{s.name}</span>
+                <div className="flex h-14 items-center justify-center">
+                  <span className="text-lg font-bold text-white">{s}</span>
                 </div>
-                <p className="text-slate-400 text-xs">{s.role}</p>
               </div>
             ))}
           </div>
@@ -214,19 +251,26 @@ export default function LibraryPage() {
 
 /* ---------- Data ---------- */
 
-const sponsors: { name: string; role: string }[] = [
-  { name: 'Microsoft', role: 'Teknik Altyapı Desteği' },
-  { name: 'Microsoft', role: 'Teknik Altyapı Desteği' },
-  { name: 'Accessibility Foundation', role: 'Erişilebilirlik Danışmanı' },
-  { name: 'Accessibility Foundation', role: 'Teknik Altyapı Desteği' },
-  { name: 'Google', role: 'Erişilebilirlik Danışmanı' },
-  { name: 'Accessibility Foundation', role: 'Erişilebilirlik Danışmanı' },
+const sponsors: string[] = [
+  'Beslen Tuz',
+  'Duru Meşrubat',
+  'FA Motors',
+  'Onur Torun',
+  'Günay Ülgülü',
+  'Ömer Öksüzaşık',
 ]
 
 const volunteers: { name: string; role: string; foto?: string }[] = [
-  { name: 'Ozan Bayırlar', role: 'Seslendiren' },
-  { name: 'Ozan Bayır', role: 'Seslendiren' },
-  { name: 'Ozan Gönüllür', role: 'Seslendiren' },
-  { name: 'Sehnia Duvana', role: 'İçerik Üreticisi' },
-  { name: 'Yasef Etana', role: 'İçerik Üreticisi' },
+  { name: 'Ömer Öksüzaşık', role: 'Proje Yöneticisi' },
+  { name: 'Furkan Gönç', role: 'Proje Yöneticisi' },
+  { name: 'Fatma Zeynep Akçalı', role: 'Proje Yöneticisi' },
+  { name: 'Necati Dilek', role: 'Seslendirmen' },
+  { name: 'Umut Çabuk', role: 'Seslendirmen' },
+  { name: 'Işıl Kartal', role: 'Seslendirmen' },
+  { name: 'Cemre Fırıncıoğulları', role: 'Seslendirmen' },
+  { name: 'Rümeysa Altay', role: 'Seslendirmen' },
+  { name: 'Kardelen Küsgün', role: 'Tasarımcı' },
+  { name: 'Muhammed Özer', role: 'Yazılımcı' },
+  { name: 'Mert Çorukoğlu', role: 'Yazılımcı' },
+  { name: 'Beraat Öztorun', role: 'Yazılımcı' },
 ]
