@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { UserPlusIcon, EyeIcon, EyeSlashIcon } from '@heroicons/react/24/outline'
+import { UserPlusIcon, EyeIcon, EyeSlashIcon, CloudArrowUpIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 export default function RegisterPage() {
   const [form, setForm] = useState({
@@ -11,6 +11,9 @@ export default function RegisterPage() {
   })
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirm, setShowConfirm] = useState(false)
+  const [file, setFile] = useState<File | null>(null)
+  const [dragOver, setDragOver] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   const update = (field: string, value: string) =>
     setForm((prev) => ({ ...prev, [field]: value }))
@@ -128,6 +131,76 @@ export default function RegisterPage() {
                   )}
                 </button>
               </div>
+            </div>
+
+            {/* Engelli Belgesi */}
+            <div>
+              <label className="block text-sm font-medium text-slate-300 mb-1.5">
+                Engelli Belgesi
+              </label>
+              <p className="text-xs text-slate-500 mb-2">
+                PDF, JPG veya PNG formatında engelli sağlık kurulu raporu yükleyin.
+              </p>
+
+              {file ? (
+                <div className="flex items-center justify-between rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <CloudArrowUpIcon className="h-5 w-5 shrink-0 text-amber-400" aria-hidden="true" />
+                    <span className="text-sm text-white truncate">{file.name}</span>
+                    <span className="text-xs text-slate-500 shrink-0">
+                      ({(file.size / 1024 / 1024).toFixed(1)} MB)
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => { setFile(null); if (fileInputRef.current) fileInputRef.current.value = '' }}
+                    className="shrink-0 ml-2 text-slate-400 hover:text-red-400 transition-colors"
+                    aria-label="Dosyayı kaldır"
+                  >
+                    <XMarkIcon className="h-5 w-5" />
+                  </button>
+                </div>
+              ) : (
+                <div
+                  onDragOver={(e) => { e.preventDefault(); setDragOver(true) }}
+                  onDragLeave={() => setDragOver(false)}
+                  onDrop={(e) => {
+                    e.preventDefault()
+                    setDragOver(false)
+                    const dropped = e.dataTransfer.files[0]
+                    if (dropped) setFile(dropped)
+                  }}
+                  onClick={() => fileInputRef.current?.click()}
+                  className={`flex flex-col items-center justify-center rounded-xl border-2 border-dashed px-4 py-6 cursor-pointer transition-colors ${
+                    dragOver
+                      ? 'border-amber-500 bg-amber-500/10'
+                      : 'border-white/10 hover:border-white/30 bg-white/5'
+                  }`}
+                  role="button"
+                  tabIndex={0}
+                  aria-label="Engelli belgesi yüklemek için tıklayın veya sürükleyin"
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') fileInputRef.current?.click() }}
+                >
+                  <CloudArrowUpIcon className="h-8 w-8 text-slate-500 mb-2" aria-hidden="true" />
+                  <span className="text-sm text-slate-400">
+                    Sürükle bırak veya <span className="text-amber-400 font-medium">dosya seç</span>
+                  </span>
+                  <span className="text-xs text-slate-600 mt-1">
+                    PDF, JPG, PNG — Maks. 10MB
+                  </span>
+                </div>
+              )}
+
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png"
+                className="hidden"
+                onChange={(e) => {
+                  const selected = e.target.files?.[0]
+                  if (selected) setFile(selected)
+                }}
+              />
             </div>
 
             <button

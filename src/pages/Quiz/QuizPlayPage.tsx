@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { SpeakerWaveIcon, PlayIcon, PauseIcon } from '@heroicons/react/24/solid'
+import { SpeakerWaveIcon, PauseIcon } from '@heroicons/react/24/solid'
 import { quizzes } from './quizData'
 
 const choices = ['A', 'B', 'C', 'D', 'E'] as const
@@ -50,8 +50,11 @@ export default function QuizPlayPage() {
       audio.pause()
       setIsPlaying(false)
     } else {
-      audio.play()
       setIsPlaying(true)
+      // Screen reader'ın buton açıklamasını okumasını bekle, sonra sesi başlat
+      setTimeout(() => {
+        audio.play()
+      }, 1000)
     }
   }
 
@@ -180,32 +183,23 @@ export default function QuizPlayPage() {
             />
             <audio ref={feedbackRef} preload="none" />
 
-            {/* Play button */}
             <button
               type="button"
               onClick={handlePlay}
-              className="flex h-16 w-16 items-center justify-center rounded-full bg-amber-500 shadow-lg shadow-amber-500/30 hover:bg-amber-400 transition-colors"
+              className="inline-flex items-center gap-3 rounded-xl bg-amber-500 px-6 py-3.5 text-lg font-semibold text-white shadow-lg shadow-amber-500/25 hover:bg-amber-400 transition-colors"
               aria-label={isPlaying ? 'Soruyu duraklat' : 'Soruyu dinle'}
             >
               {isPlaying ? (
-                <PauseIcon className="h-8 w-8 text-white" />
+                <PauseIcon className="h-6 w-6" aria-hidden="true" />
               ) : (
-                <PlayIcon className="h-8 w-8 text-white ml-1" />
+                <SpeakerWaveIcon className="h-6 w-6" aria-hidden="true" />
               )}
-            </button>
-
-            <button
-              type="button"
-              onClick={handlePlay}
-              className="inline-flex items-center gap-2 rounded-xl bg-white/10 border border-white/10 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/15 transition-colors"
-            >
-              <SpeakerWaveIcon className="h-4 w-4 text-amber-400" aria-hidden="true" />
-              Soruyu Dinle
+              {isPlaying ? 'Durakla' : 'Soruyu Dinle'}
             </button>
           </div>
 
           {/* Answer choices */}
-          <div className="grid grid-cols-5 gap-3 mb-6" role="radiogroup" aria-label="Cevap şıkları">
+          <div className="grid grid-cols-5 gap-3 mb-6">
             {choices.map((choice) => {
               let style = 'bg-white/5 border-white/10 text-white hover:bg-white/10'
 
@@ -225,8 +219,6 @@ export default function QuizPlayPage() {
                   type="button"
                   onClick={() => handleAnswer(choice)}
                   disabled={answered}
-                  role="radio"
-                  aria-checked={selectedAnswer === choice}
                   aria-label={`${choice} şıkkı`}
                   className={`flex h-14 w-full items-center justify-center rounded-xl border-2 text-lg font-bold transition-all ${style} ${
                     !answered ? 'cursor-pointer active:scale-95' : 'cursor-default'

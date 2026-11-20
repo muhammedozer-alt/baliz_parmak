@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode
   requiredRole?: 'admin'
 }
-
+//
 export default function ProtectedRoute({ children, requiredRole }: Props) {
   const user = useAuthStore((s) => s.user)
   const isInitialized = useAuthStore((s) => s.isInitialized)
