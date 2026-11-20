@@ -1,4 +1,13 @@
+import { useState } from 'react'
 import { members, hierarchyLabels, type Member } from './managementData'
+
+// "Fatma Zeynep Akçalı" -> "FA" (ilk ve son kelimenin baş harfi)
+function getInitials(name: string) {
+  const words = name.trim().split(/\s+/)
+  const first = words[0]?.charAt(0) ?? ''
+  const last = words.length > 1 ? words[words.length - 1].charAt(0) : ''
+  return (first + last).toLocaleUpperCase('tr-TR')
+}
 
 const LinkedInIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-4 h-4">
@@ -10,16 +19,31 @@ function MemberCard({ member, size = 'md' }: { member: Member; size?: 'lg' | 'md
   const imgSize = size === 'lg' ? 'h-36 w-36' : size === 'md' ? 'h-28 w-28' : 'h-24 w-24'
   const nameSize = size === 'lg' ? 'text-xl' : size === 'md' ? 'text-lg' : 'text-base'
   const padding = size === 'lg' ? 'p-8' : size === 'md' ? 'p-6' : 'p-5'
+  const initialsSize = size === 'lg' ? 'text-4xl' : size === 'md' ? 'text-3xl' : 'text-2xl'
+  const [imgFailed, setImgFailed] = useState(!member.foto)
 
   return (
     <div className={`glass rounded-2xl ${padding} text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
       <div className="relative inline-block mb-4">
-        <img
-          src={member.foto}
-          alt={member.isim}
-          loading="lazy"
-          className={`${imgSize} rounded-full object-cover mx-auto ring-3 ring-amber-500/30`}
-        />
+        {imgFailed ? (
+          <div
+            role="img"
+            aria-label={member.isim}
+            className={`${imgSize} rounded-full mx-auto ring-3 ring-amber-500/30 bg-gradient-to-br from-amber-500/30 to-slate-700 flex items-center justify-center`}
+          >
+            <span className={`${initialsSize} font-bold text-amber-300`} aria-hidden="true">
+              {getInitials(member.isim)}
+            </span>
+          </div>
+        ) : (
+          <img
+            src={member.foto}
+            alt={member.isim}
+            loading="lazy"
+            onError={() => setImgFailed(true)}
+            className={`${imgSize} rounded-full object-cover mx-auto ring-3 ring-amber-500/30`}
+          />
+        )}
         {size === 'lg' && (
           <div className="absolute -bottom-1 -right-1 h-8 w-8 rounded-full bg-amber-500 flex items-center justify-center shadow-lg">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
