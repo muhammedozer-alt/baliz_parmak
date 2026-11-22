@@ -49,7 +49,7 @@ export default function Header() {
           >
             <img
               src={logoImg}
-              alt="BalİZ Parmak Kulübü Logo"
+              alt="BalİZ Parmak Kulübü logosu"
               className="h-24 w-auto object-contain"
             />
             <span className="text-lg font-bold text-white hidden sm:block">

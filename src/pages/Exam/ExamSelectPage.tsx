@@ -16,7 +16,7 @@ export default function ExamSelectPage() {
     setError('')
 
     if (!selected) {
-      setError('Lutfen hazirlanmak istediginiz sinavi secin.')
+      setError('Lütfen hazırlanmak istediğiniz sınavı seçin.')
       // TODO: Uyari sesi cal
       return
     }
@@ -26,7 +26,7 @@ export default function ExamSelectPage() {
 
     if (!targetNet || isNaN(net) || net < 1 || net > limit.max) {
       setError(
-        `Girdiginiz deger sinav standartlari disindadir. ${limit.label} icin 1-${limit.max} arasi bir deger girin.`
+        `Girdiğiniz değer sınav standartlarının dışındadır. ${limit.label} için 1-${limit.max} arası bir değer girin.`
       )
       return
     }
@@ -37,15 +37,15 @@ export default function ExamSelectPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-16">
-      <h1 className="text-3xl font-bold text-text-primary">Sinav Secimi</h1>
+      <h1 className="text-3xl font-bold text-text-primary">Sınav Seçimi</h1>
       <p className="mt-2 text-text-secondary">
-        Hazirlanmak istediginiz sinavi secin ve hedefinizi belirleyin.
+        Hazırlanmak istediğiniz sınavı seçin ve hedefinizi belirleyin.
       </p>
 
       {/* Exam Type Selection */}
       <fieldset className="mt-10" aria-describedby={error ? 'exam-error' : undefined}>
         <legend className="text-lg font-semibold text-text-primary">
-          Hangi sinava hazirlaniyorsunuz?
+          Hangi sınava hazırlanıyorsunuz?
         </legend>
         <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {(['kpss', 'yks'] as const).map((exam) => (
@@ -85,7 +85,7 @@ export default function ExamSelectPage() {
             Hedef Netiniz
           </label>
           <p className="text-sm text-text-secondary">
-            {examLimits[selected].label} icin 1 ile {examLimits[selected].max} arasinda bir deger girin.
+            {examLimits[selected].label} için 1 ile {examLimits[selected].max} arasında bir değer girin.
           </p>
           <input
             id="target-net"
@@ -98,7 +98,7 @@ export default function ExamSelectPage() {
             aria-describedby={error ? 'exam-error' : 'target-hint'}
           />
           <p id="target-hint" className="mt-1 text-xs text-text-muted">
-            Ornegin: 80
+            Örneğin: 80
           </p>
         </div>
       )}

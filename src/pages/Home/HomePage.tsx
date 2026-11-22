@@ -58,38 +58,19 @@ export default function HomePage() {
             >
               Biz Kimiz?
             </h2>
-            <p className="text-slate-700 text-lg leading-relaxed mb-8">
-              <strong>Çukurova Üniversitesi BALiz Parmak Kulübü</strong>, iyiliği,
-              dayanışmayı ve birlikte gelişmeyi benimseyen; gerçekleştirdiği
-              projelerle topluma değer katmayı ve geleceğe tatlı izler bırakmayı
-              hedefleyen bir öğrenci topluluğudur.
-            </p>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
-              <div>
-                <h3 className="text-xl font-bold text-amber-600 mb-3">
-                  Vizyonumuz
-                </h3>
-                <p className="text-slate-600 italic border-l-4 border-amber-400 pl-4 py-2 mb-6">
-                  Birlikte hareket etmenin gücüne inanan; bilgili, kültürlü,
-                  çalışkan ve kendini sürekli geliştiren gençlerin öncülüğünde,
-                  topluma değer katan, iyiliği çoğaltan ve gelecek nesillere
-                  kalıcı, tatlı izler bırakan örnek bir öğrenci topluluğu olmak.
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 items-center">
+              <div className="space-y-4 text-slate-700 text-lg leading-relaxed">
+                <p>
+                  <strong>Çukurova Üniversitesi BALiz Parmak Kulübü</strong>,
+                  sürekli kendini yenileyen, gelişen, geliştiren ve
+                  gerçekleştirdiği projelerle topluma kalıcı izler bırakmayı
+                  hedefleyen, üniversitenin en tatlı öğrenci topluluğudur.
                 </p>
-
-                <h3 className="text-xl font-bold text-amber-600 mb-3">
-                  Misyonumuz
-                </h3>
-                <p className="text-slate-600 mb-2">
-                  Gençlerin bilgi, yetenek ve yaratıcılıklarını geliştirmelerine
-                  fırsat sunmak; eğitim, kültür, sanat, teknoloji ve sosyal
-                  sorumluluk alanlarında yenilikçi projeler hayata geçirmek.
-                </p>
-                <p className="text-slate-600">
-                  Sevgi, saygı, gönüllülük ve dayanışma ilkeleriyle birlikte
-                  öğrenen, üreten ve gelişen gençleri bir araya getirerek fırsat
-                  eşitliğini güçlendirmek, toplumsal fayda oluşturmak ve
-                  dokunduğumuz her hayatta tatlı bir iz bırakmak.
+                <p>
+                  Eğitimden sanata, kültürden sosyal sorumluluğa kadar birçok
+                  alanda geliştirdiği projelerle bireylerin potansiyellerini
+                  keşfetmelerine, kendilerini geliştirmelerine ve toplumsal
+                  yaşamda aktif rol almalarına katkı sağlamayı amaçlamaktadır.
                 </p>
               </div>
 
@@ -98,7 +79,7 @@ export default function HomePage() {
                   <div className="h-64 rounded-xl bg-gradient-to-br from-amber-100 to-amber-50 shadow-inner flex items-center justify-center p-6">
                     <img
                       src={logoImg}
-                      alt="BalİZ Parmak Kulübü Logo"
+                      alt="BalİZ Parmak Kulübü logosu"
                       className="max-h-full w-auto object-contain"
                     />
                   </div>
@@ -110,6 +91,44 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
+              <div>
+                <h3 className="text-xl font-bold text-amber-600 mb-3">
+                  Vizyonumuz
+                </h3>
+                <p className="text-slate-600 italic border-l-4 border-amber-400 pl-4 py-2">
+                  Engellerin değil, fırsatların konuşulduğu; farklılıkların
+                  zenginlik olarak görüldüğü ve herkesin eşit imkânlarla geleceğe
+                  iz bırakabildiği bir toplum oluşturmak.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-amber-600 mb-3">
+                  Misyonumuz
+                </h3>
+                <p className="text-slate-600">
+                  Gençlerin bilgi, birikim, yaratıcılık ve gönüllülük ruhunu bir
+                  araya getirerek birlikte üretmek, sürekli gelişmek ve topluma
+                  değer katan projeler hayata geçirmek. Dayanışmayı,
+                  kapsayıcılığı ve fırsat eşitliğini güçlendirerek dokunduğumuz
+                  her hayatta tatlı bir iz bırakmak.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 space-y-3 text-center text-slate-700 leading-relaxed">
+              <p>
+                BALiz Parmak Kulübü olarak, her bireyin topluma katabileceği bir
+                değer olduğuna inanıyor; gerçekleştirdiğimiz projelerle yalnızca
+                bugüne değil, geleceğe de kalıcı ve anlamlı izler bırakmayı
+                hedefliyoruz.
+              </p>
+              <p className="font-semibold italic text-slate-800">
+                Çünkü biz inanıyoruz ki gelecek, BALiz Parmak'la daha tatlı
+                gelecek!
+              </p>
             </div>
           </div>
         </div>
@@ -498,7 +517,7 @@ const etkiStats = [
   { value: '750+', label: 'Desteklenen Öğrenci' },
   { value: '45+', label: 'Gönüllü Eğitmen' },
   { value: '120+', label: 'Eğitim Etkinliği' },
-  { value: '2000+', label: 'Dağıtılan Kaynak' },
+  { value: '2.000+', label: 'Dağıtılan Kaynak' },
 ]
 
 const rakamStats = [
@@ -561,6 +580,6 @@ const networkItems = [
   {
     icon: BriefcaseIcon,
     title: 'Profesyonel Kurumlar',
-    description: 'Profesyonel kurumlarla bağlantılar kurarak üyelerimize staj ve iş imkanları sağlıyoruz.',
+    description: 'Profesyonel kurumlarla bağlantılar kurarak üyelerimize staj ve iş imkânları sağlıyoruz.',
   },
 ]

@@ -2,34 +2,34 @@ import { useState } from 'react'
 
 const faqItems = [
   {
-    question: 'Platforma nasil kayit olabilirim?',
+    question: 'Platforma nasıl kayıt olabilirim?',
     answer:
-      'Ana sayfadaki "Kayit Ol" butonuna tiklayarak e-posta adresiniz ve kisisel bilgilerinizle kayit olabilirsiniz.',
+      'Ana sayfadaki "Kayıt Ol" butonuna tıklayarak e-posta adresiniz ve kişisel bilgilerinizle kayıt olabilirsiniz.',
   },
   {
-    question: 'Engelli belgemi nasil yukleyebilirim?',
+    question: 'Engelli belgemi nasıl yükleyebilirim?',
     answer:
-      'Kayit olduktan sonra profil ayarlarindan engelli belgenizi yukleyebilirsiniz. Belgeniz admin tarafindan incelenip onaylanacaktir.',
+      'Kayıt olduktan sonra profil ayarlarından engelli belgenizi yükleyebilirsiniz. Belgeniz yönetici tarafından incelenip onaylanacaktır.',
   },
   {
-    question: 'Ses dosyalari yuklenmiyor, ne yapmaliyim?',
+    question: 'Ses dosyaları yüklenmiyor, ne yapmalıyım?',
     answer:
-      'Internet baglantinizi kontrol edin. Sorun devam ederse sayfayi yenileyip tekrar deneyin. Hala cozulmediyse "Hata Bildir" butonunu kullanin.',
+      'İnternet bağlantınızı kontrol edin. Sorun devam ederse sayfayı yenileyip tekrar deneyin. Hâlâ çözülmediyse "Hata Bildir" butonunu kullanın.',
   },
   {
-    question: 'Deneme sinavinda kaldigim yerden devam edebilir miyim?',
+    question: 'Deneme sınavında kaldığım yerden devam edebilir miyim?',
     answer:
-      'Evet! Ilerlemeniz otomatik olarak kaydedilir. Siteyi kapatip actiktan sonra kaldiginiz sorudan devam edebilirsiniz.',
+      'Evet! İlerlemeniz otomatik olarak kaydedilir. Siteyi kapatıp açtıktan sonra kaldığınız sorudan devam edebilirsiniz.',
   },
   {
-    question: 'Ses hizini nasil degistirebilirim?',
+    question: 'Ses hızını nasıl değiştirebilirim?',
     answer:
-      'Ses oynaticisindaki hiz butonuyla 0.75x, 1x, 1.25x ve 1.5x secenekleri arasinda gecis yapabilirsiniz.',
+      'Ses oynatıcısındaki hız butonlarıyla 0.75x, 1x, 1.25x ve 1.5x seçenekleri arasında geçiş yapabilirsiniz.',
   },
   {
-    question: 'Platform ucretsiz mi?',
+    question: 'Platform ücretsiz mi?',
     answer:
-      'Evet, Baliz Parmak Egitim Platformu tamamen ucretsizdir ve kar amaci gutmez.',
+      'Evet, BalİZ Parmak Eğitim Platformu tamamen ücretsizdir ve kâr amacı gütmez.',
   },
 ]
 
@@ -43,10 +43,10 @@ export default function FaqPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16">
       <h1 className="text-3xl font-bold text-text-primary">
-        Sikca Sorulan Sorular
+        Sıkça Sorulan Sorular
       </h1>
       <p className="mt-2 text-text-secondary">
-        Merak ettiginiz sorularin cevaplarini burada bulabilirsiniz.
+        Merak ettiğiniz soruların cevaplarını burada bulabilirsiniz.
       </p>
 
       <div className="mt-10 space-y-3">
@@ -90,7 +90,7 @@ export default function FaqPage() {
           Sorunuz burada yok mu?
         </h2>
         <p className="mt-2 text-text-secondary">
-          Bir hata veya sorun bildirmek isterseniz asagidaki butonu kullanin.
+          Bir hata veya sorun bildirmek isterseniz aşağıdaki butonu kullanın.
         </p>
         <button className="mt-4 rounded-lg bg-danger px-6 py-2.5 font-medium text-text-inverse hover:bg-red-700 transition-colors">
           Hata Bildir

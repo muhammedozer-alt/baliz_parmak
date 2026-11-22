@@ -23,7 +23,7 @@ export default function MainLayout() {
 
       {/* Skip to content link - first focusable element for keyboard users */}
       <a href="#main-content" className="skip-link">
-        Ana icerige atla
+        Ana içeriğe atla
       </a>
 
       <div className="relative z-10 flex min-h-screen flex-col">

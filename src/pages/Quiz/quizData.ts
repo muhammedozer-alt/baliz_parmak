@@ -55,21 +55,6 @@ function deneme(
   }
 }
 
-/** İlk yüklenen kısa örnek denemeler (farklı sorular, .aac). */
-function ornekDeneme(subjectId: string, subjectName: string, answers: Choice[]): Quiz {
-  return {
-    id: subjectId, // eski bağlantılar bozulmasın diye kimlik aynı kaldı
-    title: `${subjectName} - Örnek Deneme`,
-    label: 'Örnek Deneme',
-    questions: answers.map((correctAnswer, i) => ({
-      id: i + 1,
-      audioUrl: `/audio/${subjectId}/soru${i + 1}.aac`,
-      answerAudioUrl: `/audio/${subjectId}/cevap${i + 1}.aac`,
-      correctAnswer,
-    })),
-  }
-}
-
 // TODO: Backend bağlantısında API'den gelecek
 export const subjects: Subject[] = [
   {
@@ -80,7 +65,6 @@ export const subjects: Subject[] = [
     lectureUrl: '/audio/cografya/konu-anlatimi.ogg',
     quizzes: [
       deneme('cografya', 'Coğrafya', 1, 'CBDDDCADBC', 'm4a', { 1: 'ogg' }),
-      ornekDeneme('cografya', 'Coğrafya', ['C', 'E', 'C']),
     ],
   },
   {
@@ -93,7 +77,6 @@ export const subjects: Subject[] = [
       // Soru 9: kulübün verdiği cevap B (kayıt da "B, And Dağları" diyor); soru Everest'i soruyor, ileride gözden geçirilebilir.
       deneme('genel-kultur', 'Genel Kültür', 1, 'BCBCBBCBBB', 'ogg'),
       deneme('genel-kultur', 'Genel Kültür', 2, 'BDBABCECCB', 'ogg'),
-      ornekDeneme('genel-kultur', 'Genel Kültür', ['E', 'D', 'C', 'A', 'E']),
     ],
   },
   {
@@ -106,7 +89,6 @@ export const subjects: Subject[] = [
       deneme('matematik', 'Matematik', 1, 'BBCCECBBBC', 'ogg'),
       // Soru 6: |2x−5|=9 → toplam 5 → C (kullanıcı kaydı dinleyip teyit etti).
       deneme('matematik', 'Matematik', 2, 'BCDDCCCDDC', 'ogg'),
-      ornekDeneme('matematik', 'Matematik', ['C', 'E', 'B', 'E', 'A']),
     ],
   },
   {

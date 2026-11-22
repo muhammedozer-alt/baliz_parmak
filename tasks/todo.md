@@ -45,13 +45,13 @@
 - GK1 S9: Kulüp kararıyla B (verilen cevap). Not: soru Everest'i soruyor, Himalaya C şıkkında.
 - Mat2 S6: C — kullanıcı kaydı dinleyip teyit etti.
 - Tarih 1 soru kayıtlarında okunan soru numaraları 1 kayık (2. dosya "Soru 3" diyor).
-- Sitedeki eski .aac kayıtları farklı sorular; mevcut cevapları (C,E,C / E,D,C,A,E / C,E,B,E,A) kayıtlarla doğrulandı.
+- Sitedeki eski .aac kayıtları farklı sorular; mevcut cevapları (C,E,C / E,D,C,A,E / C,E,B,E,A) kayıtlarla doğrulandı. Kullanıcı isteğiyle listeden kaldırıldı (dosyalar `public/audio/<ders>/` altında duruyor).
 
 ## Açık sorular
 1. **Cevap anahtarı:** Sesleri dinleyemiyorum; her denemenin 10 sorusunun doğru şıkkı (A–E) lazım. Mevcut kodda yalnızca Coğrafya 1 (ilk 3), Genel Kültür 1 ve Matematik 1 (ilk 5) var.
 2. **Ana sayfa "Biz Kimiz"** mesajı WhatsApp'ta kesik ("Devamını okuyun"). Tam metni yapıştırabilir misin? Yoksa Hakkımızda'daki yeni Biz Kimiz + Vizyon/Misyon metnini ana sayfada da kullanayım mı?
 3. **Drive'daki görsel** elimde yok — dosyayı `src/assets/` altına koyarsan logo yerine onu koyarım.
-4. **Anıtkabir görseli** zip'te var — hangi soruya/sayfaya ait?
+4. ~~**Anıtkabir görseli**~~ — hiçbir soruya ait değil (kullanıcı, 22.11.2026).
 5. `.ogg` dosyaları eski iPhone Safari'de çalışmayabilir; bilgisayarda ffmpeg yok, şimdilik olduğu gibi koyacağım.
 
 ## Doğrulama

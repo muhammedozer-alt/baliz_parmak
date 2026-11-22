@@ -12,19 +12,19 @@ export default function NotFoundPage() {
       </div>
 
       <h1 className="mt-8 text-4xl font-bold text-text-primary">
-        404 - Sayfa Bulunamadi
+        404 - Sayfa Bulunamadı
       </h1>
 
       <p className="mt-4 max-w-md text-lg text-text-secondary">
-        Aradiginiz sayfayi kutuphane raflarinda bulamadik.
-        Ama uzulmeyin, ana sayfaya donup yeni bir kesfe cikabiliriz!
+        Aradığınız sayfayı kütüphane raflarında bulamadık.
+        Ama üzülmeyin, ana sayfaya dönüp yeni bir keşfe çıkabiliriz!
       </p>
 
       <Link
         to="/"
         className="mt-8 rounded-xl bg-primary px-8 py-3 text-lg font-semibold text-text-inverse hover:bg-primary-dark transition-colors"
       >
-        Beni Ana Sayfaya Gotur
+        Beni Ana Sayfaya Götür
       </Link>
     </div>
   )
