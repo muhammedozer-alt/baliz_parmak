@@ -30,7 +30,7 @@ export const announcements: Announcement[] = [
     id: 1767036268616,
     title: '10 Aralık – BALİZ Parmak Kulübü 2. Olağan Seçimi',
     content:
-      "10 Aralık tarihinde, Çukurova Üniversitesi Sağlık Kültür ve Spor Daire Başkanlığı bünyesinde gerçekleştirilen BALİZ Parmak Kulübü 2. Olağan Seçimi başarıyla tamamlandı.\n\nGerçekleştirilen seçimde, tek aday olarak seçime giren Ömer Öksüzaşık, 120 kişinin oyunu alarak gerekli çoğunluğu sağlamış ve ilk turda yeniden başkanlığa seçilmiştir.\n\nDemokratik katılımın esas alındığı bu süreçte, kulübümüzün gelecek dönem hedefleri doğrultusunda güçlü bir irade ortaya konmuştur.\nYeni dönemde de BALİZ Parmak Kulübü olarak sosyal fayda üretmeye, daha kapsayıcı projeler geliştirmeye ve birlikte iz bırakmaya devam edeceğiz.",
+      "10 Aralık tarihinde, Çukurova Üniversitesi Sağlık Kültür ve Spor Daire Başkanlığı bünyesinde gerçekleştirilen BALİZ Parmak Kulübü 2. Olağan Seçimi başarıyla tamamlandı.\n\nGerçekleştirilen seçimde, tek aday olarak seçime giren Ömer Öksüzaşıkı, 120 kişinin oyunu alarak gerekli çoğunluğu sağlamış ve ilk turda yeniden başkanlığa seçilmiştir.\n\nDemokratik katılımın esas alındığı bu süreçte, kulübümüzün gelecek dönem hedefleri doğrultusunda güçlü bir irade ortaya konmuştur.\nYeni dönemde de BALİZ Parmak Kulübü olarak sosyal fayda üretmeye, daha kapsayıcı projeler geliştirmeye ve birlikte iz bırakmaya devam edeceğiz.",
     date: '29.12.2025',
     image_url:
       'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1767036267637.jpeg',

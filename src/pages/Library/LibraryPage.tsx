@@ -257,11 +257,11 @@ const sponsors: string[] = [
   'FA Motors',
   'Onur Torun',
   'Günay Ülgülü',
-  'Ömer Öksüzaşık',
+  'Ömer Öksüzaşıkı',
 ]
 
 const volunteers: { name: string; role: string; foto?: string }[] = [
-  { name: 'Ömer Öksüzaşık', role: 'Proje Yöneticisi' },
+  { name: 'Ömer Öksüzaşıkı', role: 'Proje Yöneticisi' },
   { name: 'Furkan Gönç', role: 'Proje Yöneticisi' },
   { name: 'Fatma Zeynep Akçalı', role: 'Proje Yöneticisi' },
   { name: 'Muhammed Özer', role: 'Yazılımcı' },

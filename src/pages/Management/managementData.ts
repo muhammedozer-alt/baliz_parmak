@@ -12,7 +12,7 @@ export interface Member {
 export const members: Member[] = [
   {
     id: 68,
-    isim: 'Ömer Öksüzaşık',
+    isim: 'Ömer Öksüzaşıkı',
     pozisyon: 'Kulüp Başkanı',
     foto: 'https://tcbwiysmhbuensgixvws.supabase.co/storage/v1/object/public/uploads/images/image_1759951168421.jpg',
     linkedin: 'https://www.linkedin.com/in/%C3%B6mer-%C3%B6ks%C3%BCza%C5%9F%C4%B1k%C4%B1-b364b9329/',

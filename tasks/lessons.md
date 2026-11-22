@@ -1,5 +1,9 @@
 # Dersler
 
+## Kişi isimlerini "yazım hatası" diye düzeltme (22.11.2026)
+- **Hata:** Önceki oturumda "Ömer Öksüzaşıkı" yazım hatası sanılıp "Öksüzaşık" yapıldı (ac81d69); doğrusu "Öksüzaşıkı".
+- **Kural:** Özel isimleri (kişi, kulüp, ürün) kaynağa göre doğrula: LinkedIn adresi, kullanıcının yazdığı hâl. Tahminle düzeltme; emin değilsen sor.
+
 ## "BalİZ Parmak" özel isimdir, yazımına dokunma (22.11.2026)
 - **Hata:** Yazım düzeltmesi yaparken "BalİZ Parmak" yazımlarını "BALiz Parmak" diye "tek tipe" çevirdim.
 - **Kural:** "BalİZ Parmak" kulübün adıdır (İZ vurgusu bilinçli). Yazım düzeltmelerinde marka/özel isimleri değiştirme.
