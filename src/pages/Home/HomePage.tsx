@@ -23,7 +23,7 @@ export default function HomePage() {
             <span className="text-amber-400">KULÜBÜ</span>
           </h1>
           <p className="mt-4 text-xl text-slate-300">
-            Çukurova Üniversitesi'nde engelleri aşan, ilham veren öğrenci kulübü
+            Çukurova Üniversitesi'nde İZ bırakan, birlikte değer üreten öğrenci kulübü
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
@@ -31,6 +31,12 @@ export default function HomePage() {
               className="rounded-xl bg-amber-500 px-8 py-3 text-lg font-semibold text-white shadow-lg shadow-amber-500/25 hover:bg-amber-400 transition-colors"
             >
               Bizi Tanıyın
+            </Link>
+            <Link
+              to="/yonetim"
+              className="rounded-xl border border-white/20 px-8 py-3 text-lg font-semibold text-white hover:bg-white/10 transition-colors"
+            >
+              Yönetim Kadromuz
             </Link>
             <Link
               to="/duyurular"
@@ -53,11 +59,10 @@ export default function HomePage() {
               Biz Kimiz?
             </h2>
             <p className="text-slate-700 text-lg leading-relaxed mb-8">
-              Çukurova Üniversitesi BalİZ Parmak Kulübü, bireylerin karşılaştığı
-              fiziksel, sosyal ve psikolojik engelleri aşmalarına destek olmayı
-              hedefleyen, ilham veren bir öğrenci kulübüdür. Kapsayıcılığı ve
-              farkındalığı merkezine alarak öğrencilerin kişisel ve sosyal
-              gelişimlerine katkı sağlamaktadır.
+              <strong>Çukurova Üniversitesi BALiz Parmak Kulübü</strong>, iyiliği,
+              dayanışmayı ve birlikte gelişmeyi benimseyen; gerçekleştirdiği
+              projelerle topluma değer katmayı ve geleceğe tatlı izler bırakmayı
+              hedefleyen bir öğrenci topluluğudur.
             </p>
 
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 items-start">
@@ -66,22 +71,25 @@ export default function HomePage() {
                   Vizyonumuz
                 </h3>
                 <p className="text-slate-600 italic border-l-4 border-amber-400 pl-4 py-2 mb-6">
-                  "Herkesin potansiyelini istediği şekilde gerçekleştirebildiği;
-                  engellerin değil, hayallerin konuşulduğu bir birliktelik
-                  oluşturmaktır."
+                  Birlikte hareket etmenin gücüne inanan; bilgili, kültürlü,
+                  çalışkan ve kendini sürekli geliştiren gençlerin öncülüğünde,
+                  topluma değer katan, iyiliği çoğaltan ve gelecek nesillere
+                  kalıcı, tatlı izler bırakan örnek bir öğrenci topluluğu olmak.
                 </p>
 
                 <h3 className="text-xl font-bold text-amber-600 mb-3">
                   Misyonumuz
                 </h3>
                 <p className="text-slate-600 mb-2">
-                  Sosyal, kültürel ve fiziksel engelleri aşmak için farkındalık
-                  yaratmak, kapsayıcı projeler geliştirmektir.
+                  Gençlerin bilgi, yetenek ve yaratıcılıklarını geliştirmelerine
+                  fırsat sunmak; eğitim, kültür, sanat, teknoloji ve sosyal
+                  sorumluluk alanlarında yenilikçi projeler hayata geçirmek.
                 </p>
                 <p className="text-slate-600">
-                  BalİZ Parmak, yalnızca bireysel gelişimi değil; aynı zamanda
-                  toplumun genelinde empati, dayanışma ve erişilebilirlik
-                  kültürünü yaygınlaştırmayı amaçlar.
+                  Sevgi, saygı, gönüllülük ve dayanışma ilkeleriyle birlikte
+                  öğrenen, üreten ve gelişen gençleri bir araya getirerek fırsat
+                  eşitliğini güçlendirmek, toplumsal fayda oluşturmak ve
+                  dokunduğumuz her hayatta tatlı bir iz bırakmak.
                 </p>
               </div>
 
@@ -154,18 +162,23 @@ export default function HomePage() {
                 Faaliyetlerimiz
               </h3>
               <p className="text-slate-300 mb-6">
-                BalİZ Parmak Kulübü olarak, engelli bireylerin yaşamını
-                kolaylaştırmak ve toplumsal farkındalığı artırmak için çeşitli
-                projeler yürütüyoruz.
+                BALiz Parmak Kulübü olarak gençlerin sosyalleştiği, eğlendiği,
+                öğrendiği ve birlikte geliştiği bir topluluk oluşturuyoruz.
+                Düzenlediğimiz etkinlikler ve hayata geçirdiğimiz projelerle hem
+                üniversite yaşamını renklendiriyor hem de topluma tatlı izler
+                bırakıyoruz.
               </p>
               <ul className="space-y-3">
-                {faaliyetler.map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-slate-200">
+                {faaliyetler.map((x) => (
+                  <li key={x.title} className="flex items-start gap-3 text-slate-200">
                     <CheckCircleIcon
-                      className="h-5 w-5 shrink-0 text-amber-400"
+                      className="mt-0.5 h-5 w-5 shrink-0 text-amber-400"
                       aria-hidden="true"
                     />
-                    {f}
+                    <span>
+                      <strong className="text-white">{x.title}:</strong>{' '}
+                      {x.description}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -175,19 +188,31 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold text-white mb-4">
                 Değerlerimiz
               </h3>
-              <p className="text-slate-300 mb-6">
-                Gönüllülük esasıyla hareket eden topluluğumuz, öğrencilerin
-                kendilerini gerçekleştirmeleri için gerekli ortamı sağlar. Fırsat
-                eşitliği ve kapsayıcılık ilkelerimizden asla taviz vermiyoruz.
+              <p className="text-slate-300 mb-4">
+                BALiz Parmak Kulübü olarak iyiliğin, nezaketin, sevginin ve
+                dayanışmanın dünyayı güzelleştirdiğine inanıyoruz. İncinsek de
+                incitmemeyi, kötülük görsek de iyilikle karşılık vermeyi ve her
+                koşulda insan olmanın güzelliklerini yaşatmayı ilke ediniyoruz.
               </p>
+              <p className="text-slate-300 mb-6">
+                Bilgili, kültürlü, çalışkan ve duyarlı gençler olarak yalnızca
+                kendimizi geliştirmeyi değil, edindiğimiz birikimle topluma değer
+                katmayı ve ardımızda tatlı izler bırakmayı amaçlıyoruz.
+              </p>
+              <h4 className="text-lg font-semibold text-amber-400 mb-3">
+                Temel Değerlerimiz
+              </h4>
               <ul className="space-y-3">
-                {degerler.map((d) => (
-                  <li key={d} className="flex items-center gap-3 text-slate-200">
+                {degerler.map((x) => (
+                  <li key={x.title} className="flex items-start gap-3 text-slate-200">
                     <CheckCircleIcon
-                      className="h-5 w-5 shrink-0 text-amber-400"
+                      className="mt-0.5 h-5 w-5 shrink-0 text-amber-400"
                       aria-hidden="true"
                     />
-                    {d}
+                    <span>
+                      <strong className="text-white">{x.title}:</strong>{' '}
+                      {x.description}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -329,12 +354,28 @@ export default function HomePage() {
             >
               Network
             </h2>
-            <p className="text-slate-600 text-center max-w-3xl mx-auto mb-8">
-              BalİZ Parmak, üyeleri arasında güçlü bir bağ ve dayanışma ağı
-              oluşturur. Sosyal girişimciler, akademisyenler ve sivil toplum
-              kuruluşları ile iş birliği yaparak öğrencilere ilham verici
-              buluşmalar ve yeni fırsatlar sunar.
-            </p>
+            <div className="text-slate-600 text-center max-w-3xl mx-auto mb-8 space-y-3">
+              <p>
+                BALiz Parmak Kulübü olarak güçlü bir geleceğin, doğru insanlarla
+                kurulan anlamlı bağlarla şekillendiğine inanıyoruz.
+              </p>
+              <p>
+                Üyelerimizi girişimciler, akademisyenler, iş dünyasının
+                temsilcileri ve farklı alanlarda başarıya ulaşmış kişilerle
+                buluşturarak bilgi, deneyim ve fırsatların paylaşıldığı güçlü bir
+                iletişim ağı oluşturuyoruz.
+              </p>
+              <p>
+                Gençlerin yeni insanlarla tanışmasını, farklı bakış açıları
+                kazanmasını, kendilerini geliştirmesini ve gelecekteki
+                kariyerlerine değer katacak bağlantılar kurmasını destekliyoruz.
+              </p>
+              <p className="font-medium text-slate-700">
+                Çünkü biz, yalnızca yeni insanlarla tanışmayı değil; birlikte
+                öğrenmeyi, birlikte büyümeyi ve birbirimizin hayatında tatlı
+                izler bırakmayı önemsiyoruz.
+              </p>
+            </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               {networkItems.map((item) => (
                 <div
@@ -411,16 +452,46 @@ function SectionTitle({ id, title, subtitle }: { id: string; title: string; subt
 /* ---------- Data ---------- */
 
 const faaliyetler = [
-  'Erişilebilir gezi ve eğlence etkinlikleri',
-  'İşaret dili eğitim programları',
-  'Erişilebilirlik çalışmaları',
-  'Sosyal entegrasyon etkinlikleri',
+  {
+    title: 'Sosyal ve Eğlenceli Etkinlikler',
+    description:
+      'Çiğ köfte partileri, geziler, festivaller, tanışma buluşmaları ve öğrencilerin keyifli vakit geçirebileceği çeşitli organizasyonlar.',
+  },
+  {
+    title: 'Teknoloji ve Girişimcilik',
+    description:
+      'Yapay zekâ zirveleri, hackathon yarışmaları, yenilikçi fikir yarışmaları ve gençlerin yaratıcılıklarını ortaya çıkarabilecekleri etkinlikler.',
+  },
+  {
+    title: 'Eğitim ve Kişisel Gelişim',
+    description:
+      'İşaret dili, sosyal medya yönetimi, etkili metin yazarlığı, iletişim ve liderlik eğitimlerinin yanı sıra Google, Microsoft ve Meta gibi teknoloji şirketlerinin sunduğu eğitim ve sertifika programlarına yönelik bilgilendirme ve gelişim çalışmaları.',
+  },
+  {
+    title: 'Çevre ve Sürdürülebilirlik',
+    description:
+      'Sıfır atık projeleri, geri dönüşüm çalışmaları ve çevre bilincini artırmaya yönelik sosyal sorumluluk faaliyetleri.',
+  },
+  {
+    title: 'Hayvan Hakları ve Gönüllülük',
+    description:
+      'Sokak hayvanlarının yaşam koşullarını iyileştirmeye yönelik farkındalık, beslenme ve gönüllülük projeleri.',
+  },
+  {
+    title: 'Erişilebilirlik ve Toplumsal Fayda',
+    description:
+      'Engelli bireylerin sosyal ve eğitsel yaşama katılımını destekleyen, fırsat eşitliğini ve dayanışmayı güçlendiren projeler.',
+  },
 ]
 
 const degerler = [
-  'Eşitlik ve kapsayıcılık',
-  'Gönüllülük ve dayanışma',
-  'Şeffaflık ve güvenilirlik',
+  { title: 'İyilik ve Nezaket', description: 'İncinsek de incitmemek, karşılık beklemeden iyilik yapmak.' },
+  { title: 'Sevgi ve Saygı', description: 'Farklılıklarımızı zenginlik bilerek herkese anlayışla yaklaşmak.' },
+  { title: 'Çalışkanlık ve Gelişim', description: 'Sürekli öğrenmek, kendimizi yenilemek ve daha iyisini başarmak için emek vermek.' },
+  { title: 'Birlik ve Dayanışma', description: 'Birlikte hareket etmek, birbirimize destek olmak ve başarıyı paylaşmak.' },
+  { title: 'Toplumsal Fayda', description: 'Bilgimizi, emeğimizi ve enerjimizi toplumun yararına dönüştürmek.' },
+  { title: 'Eşitlik ve Kapsayıcılık', description: 'Her bireyin değerli olduğuna inanmak ve herkes için fırsat eşitliğini savunmak.' },
+  { title: 'Dürüstlük ve Güven', description: 'Şeffaf, samimi ve sorumluluk sahibi bir anlayışla hareket etmek.' },
 ]
 
 const etkiStats = [
@@ -431,8 +502,8 @@ const etkiStats = [
 ]
 
 const rakamStats = [
-  { value: '5+', label: 'Yıllık Tecrübe' },
-  { value: '250+', label: 'Aktif Üye' },
+  { value: '10+', label: 'Yıllık Tecrübe' },
+  { value: '5.000+', label: 'Aktif Üye' },
   { value: '30+', label: 'Yıllık Etkinlik' },
   { value: '15+', label: 'Kurumsal Partner' },
 ]
@@ -460,19 +531,19 @@ const etkinlikler = [
 
 const kitaplar = [
   {
-    title: 'Körlük',
-    author: 'Jose Saramago',
-    description: 'Toplumsal çöküş ve insan doğası üzerine çarpıcı bir roman.',
+    title: 'Küçük Prens',
+    author: 'Antoine de Saint-Exupéry',
+    description: 'Sevgi, dostluk ve hayata çocuk gözüyle bakmanın değeri üzerine zamansız bir masal.',
   },
   {
-    title: 'Empati',
-    author: 'Adam Fawer',
-    description: 'İnsan zihninin sınırlarını ve empati gücünü sorgulatan sürekleyici bir roman.',
+    title: 'Küçük Kadınlar',
+    author: 'Louisa May Alcott',
+    description: 'Dört kız kardeşin dayanışmasını, hayallerini ve büyüme yolculuğunu anlatan bir klasik.',
   },
   {
-    title: 'Zorba',
-    author: 'Nikos Kazancakis',
-    description: 'Hayatın anlamı, özgürlük ve dostluk üzerine unutulmaz bir başyapıt.',
+    title: 'İnsan Ne ile Yaşar?',
+    author: 'Lev Tolstoy',
+    description: 'İnsanı yaşatanın sevgi ve iyilik olduğunu anlatan, düşündüren kısa öyküler.',
   },
 ]
 

@@ -1,7 +1,8 @@
 import {
   ShieldCheckIcon,
-  BoltIcon,
-  CursorArrowRaysIcon,
+  SparklesIcon,
+  UserGroupIcon,
+  GlobeAltIcon,
   HeartIcon,
   AcademicCapIcon,
   HandRaisedIcon,
@@ -38,23 +39,39 @@ export default function AboutPage() {
             </h2>
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-              <div className="space-y-4">
-                <p className="text-slate-700 leading-relaxed">
-                  Çukurova Üniversitesi BalİZ Parmak Kulübü, bireylerin
-                  karşılaştığı fiziksel, sosyal ve psikolojik engelleri
-                  aşmalarına destek olmayı hedefleyen, ilham veren bir öğrenci
-                  kulübüdür.
+              <div className="space-y-4 text-slate-700 leading-relaxed">
+                <p>
+                  <strong>Çukurova Üniversitesi BALiz Parmak Kulübü</strong>,
+                  iyiliği, dayanışmayı ve birlikte gelişmeyi benimseyen;
+                  gerçekleştirdiği projelerle topluma değer katmayı ve geleceğe
+                  tatlı izler bırakmayı hedefleyen bir öğrenci topluluğudur.
                 </p>
-                <p className="text-slate-700 leading-relaxed">
-                  Kapsayıcılığı ve farkındalığı merkezine alarak öğrencilerin
-                  kişisel ve sosyal gelişimlerine katkı sağlamaktadır.
-                  Kullanıcılarımızın memnuniyeti, bizim için en önemli değerdir.
+                <p>
+                  Bizler; öğrenmeyi seven, kendini sürekli geliştiren, çalışkan,
+                  üretken ve hayallerinin peşinden giden gençleriz. Birlikte
+                  eğleniyor, yeni dostluklar kuruyor, bilgi ve deneyimlerimizi
+                  paylaşıyor, ortak hedefler doğrultusunda çalışıyoruz.
                 </p>
-                <p className="text-slate-700 leading-relaxed">
-                  Misyonumuz, bilginin akıcı ve besleyici bir şekilde
-                  paylaşılmasını sağlamaktır. Vizyonumuz ise engelleri aşan,
-                  herkesin potansiyelini gerçekleştirebildiği bir topluluk
-                  olmaktır.
+                <p>
+                  Eğitimden teknolojiye, kültür ve sanattan sosyal sorumluluğa
+                  kadar birçok alanda düzenlediğimiz etkinliklerle gençlerin
+                  kişisel, sosyal ve kültürel gelişimlerini destekliyor;
+                  gönüllülük, fırsat eşitliği ve toplumsal faydayı
+                  çalışmalarımızın merkezinde tutuyoruz.
+                </p>
+                <p className="font-semibold italic text-slate-800">
+                  İncinsek de incitmemeyi, kötülük görsek de iyilik yapmayı ilke
+                  ediniyor; küçük bir iyiliğin bile büyük değişimlere öncülük
+                  edebileceğine inanıyoruz.
+                </p>
+                <p>
+                  Bizim için BALiz Parmak, yalnızca bir öğrenci kulübü değil;
+                  birlikte büyüdüğümüz, birbirimizden öğrendiğimiz ve güzel anılar
+                  biriktirdiğimiz bir yol arkadaşlığıdır.
+                </p>
+                <p className="font-semibold italic text-slate-800">
+                  Çünkü biz, birlikte daha güçlü olduğumuza ve geleceğin BALiz
+                  Parmak'la daha tatlı geleceğine inanıyoruz!
                 </p>
               </div>
 
@@ -85,9 +102,10 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Vizyonumuz</h3>
               <p className="text-slate-300 italic leading-relaxed">
-                "Herkesin potansiyelini istediği şekilde gerçekleştirebildiği;
-                engellerin değil, hayallerin konuşulduğu bir birliktelik
-                oluşturmaktır."
+                Birlikte hareket etmenin gücüne inanan; bilgili, kültürlü,
+                çalışkan ve kendini sürekli geliştiren gençlerin öncülüğünde,
+                topluma değer katan, iyiliği çoğaltan ve gelecek nesillere kalıcı,
+                tatlı izler bırakan örnek bir öğrenci topluluğu olmak.
               </p>
             </div>
 
@@ -96,11 +114,19 @@ export default function AboutPage() {
                 <HeartIcon className="h-6 w-6 text-amber-400" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Misyonumuz</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Sosyal, kültürel ve fiziksel engelleri aşmak için farkındalık
-                yaratmak, kapsayıcı projeler geliştirmek ve toplumun genelinde
-                empati, dayanışma ve erişilebilirlik kültürünü yaygınlaştırmak.
-              </p>
+              <div className="space-y-3 text-slate-300 leading-relaxed">
+                <p>
+                  Gençlerin bilgi, yetenek ve yaratıcılıklarını geliştirmelerine
+                  fırsat sunmak; eğitim, kültür, sanat, teknoloji ve sosyal
+                  sorumluluk alanlarında yenilikçi projeler hayata geçirmek.
+                </p>
+                <p>
+                  Sevgi, saygı, gönüllülük ve dayanışma ilkeleriyle birlikte
+                  öğrenen, üreten ve gelişen gençleri bir araya getirerek fırsat
+                  eşitliğini güçlendirmek, toplumsal fayda oluşturmak ve
+                  dokunduğumuz her hayatta tatlı bir iz bırakmak.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -141,40 +167,46 @@ export default function AboutPage() {
 
 const degerler = [
   {
-    icon: ShieldCheckIcon,
-    title: 'Güvenilirlik',
+    icon: SparklesIcon,
+    title: 'İyilik ve Nezaket',
     description:
-      'Kullanıcıların bilgilerini güvenle saklar, doğru ve zamanında duyurular yapılmasını sağlarız.',
+      'İncinsek de incitmemeyi, kötülük görsek de iyilikle karşılık vermeyi ve karşılık beklemeden insanların hayatına dokunmayı ilke ediniriz.',
   },
   {
-    icon: BoltIcon,
-    title: 'Hız',
+    icon: AcademicCapIcon,
+    title: 'Çalışkanlık ve Sürekli Gelişim',
     description:
-      'Duyurularınızı hızlıca oluşturabilir ve anında paylaşabilirsiniz. Sistemimiz her zaman hızlı ve kesintisiz çalışır.',
+      'Öğrenmenin ve gelişmenin bir sınırı olmadığına inanırız. Bilgili, kültürlü, üretken ve çalışkan bireyler olarak hem kendimizi geliştirmeyi hem de topluma değer katmayı hedefleriz.',
   },
   {
-    icon: CursorArrowRaysIcon,
-    title: 'Kullanım Kolaylığı',
+    icon: HeartIcon,
+    title: 'Sevgi ve Saygı',
     description:
-      'Herkesin rahatlıkla kullanabileceği sade ve anlaşılır bir arayüz tasarladık. Teknik bilgi gerektirmez.',
+      'Her bireyin değerli olduğuna inanır, farklılıklarımızı zenginlik olarak görürüz. İnsan ilişkilerimizde sevgiyi, saygıyı, hoşgörüyü ve anlayışı esas alırız.',
+  },
+  {
+    icon: UserGroupIcon,
+    title: 'Gönüllülük ve Dayanışma',
+    description:
+      'Birlikte hareket etmenin gücüne inanırız. Bilgimizi, zamanımızı ve emeğimizi paylaşarak birbirimize destek olur, iyiliği birlikte çoğaltırız.',
+  },
+  {
+    icon: GlobeAltIcon,
+    title: 'Toplumsal Fayda ve Tatlı İzler',
+    description:
+      'Yalnızca kendimiz için değil, toplumumuz için de üretiriz. Hayata geçirdiğimiz projelerle insanların yaşamına değer katmayı ve ardımızda kalıcı, tatlı izler bırakmayı amaçlarız.',
   },
   {
     icon: HandRaisedIcon,
     title: 'Eşitlik ve Kapsayıcılık',
     description:
-      'Fırsat eşitliği ilkesiyle hareket eder, her bireyin potansiyelini gerçekleştirebileceği ortamı sağlarız.',
+      'Engellerin değil, fırsatların konuşulduğu bir dünya için çalışırız. Her bireyin eşit fırsatlara sahip olduğu, kendini özgürce ifade edebildiği ve potansiyelini geliştirebildiği bir topluluk oluşturmayı benimseriz.',
   },
   {
-    icon: HeartIcon,
-    title: 'Gönüllülük ve Dayanışma',
+    icon: ShieldCheckIcon,
+    title: 'Dürüstlük ve Güvenilirlik',
     description:
-      'Gönüllülük esasıyla hareket eden topluluğumuz, dayanışma ruhunu her projede yaşatır.',
-  },
-  {
-    icon: AcademicCapIcon,
-    title: 'Şeffaflık',
-    description:
-      'Tüm süreçlerimizde şeffaflığı ve güvenilirliği ön planda tutarak topluluk güvenini koruruz.',
+      'Sözlerimizde ve davranışlarımızda dürüstlüğü, sorumluluğu ve şeffaflığı esas alırız. Birbirimize duyduğumuz güveni, güçlü ve sürdürülebilir birlikteliğimizin temeli olarak görürüz.',
   },
 ]
 
