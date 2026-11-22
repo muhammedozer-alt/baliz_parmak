@@ -266,7 +266,7 @@ const volunteers: { name: string; role: string; foto?: string }[] = [
   { name: 'Fatma Zeynep Akçalı', role: 'Proje Yöneticisi' },
   { name: 'Muhammed Özer', role: 'Yazılımcı' },
   { name: 'Mert Çorukoğlu', role: 'Yazılımcı' },
-  { name: 'Beraat Öztorun', role: 'Yazılımcı' },
+  { name: 'Beraat Öztorun', role: 'Elektrik - Elektronik Mühendisi' },
   { name: 'Necati Dilek', role: 'Seslendirmen' },
   { name: 'Umut Çabuk', role: 'Seslendirmen' },
   { name: 'Işıl Kartal', role: 'Seslendirmen' },
