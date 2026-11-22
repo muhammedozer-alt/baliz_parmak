@@ -7,7 +7,7 @@ import {
   UserGroupIcon,
 } from '@heroicons/react/24/outline'
 import { AcademicCapIcon } from '@heroicons/react/24/solid'
-import logoImg from '../../assets/logo.png'
+import anitkabirImg from '../../assets/anitkabir.jpeg'
 
 export default function HomePage() {
   return (
@@ -75,12 +75,12 @@ export default function HomePage() {
               </div>
 
               <div className="flex items-center justify-center">
-                <div className="relative w-full max-w-sm">
-                  <div className="h-64 rounded-xl bg-gradient-to-br from-amber-100 to-amber-50 shadow-inner flex items-center justify-center p-6">
+                <div className="relative w-full max-w-md">
+                  <div className="h-64 sm:h-72 overflow-hidden rounded-xl shadow-lg">
                     <img
-                      src={logoImg}
-                      alt="BalİZ Parmak Kulübü logosu"
-                      className="max-h-full w-auto object-contain"
+                      src={anitkabirImg}
+                      alt="Anıtkabir'de Çukurova Üniversitesi çelengini taşıyan askerler ve arkalarında yürüyen BalİZ Parmak Kulübü üyeleri"
+                      className="h-full w-full object-cover"
                     />
                   </div>
                   <div className="absolute -right-3 -bottom-3 flex h-20 w-20 items-center justify-center rounded-full bg-amber-500 shadow-lg shadow-amber-500/30 text-white font-bold text-center">

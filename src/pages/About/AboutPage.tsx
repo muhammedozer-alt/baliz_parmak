@@ -7,7 +7,7 @@ import {
   AcademicCapIcon,
   HandRaisedIcon,
 } from '@heroicons/react/24/outline'
-import logoImg from '../../assets/logo.png'
+import anitkabirImg from '../../assets/anitkabir.jpeg'
 import BizKimizText from '../../components/content/BizKimizText'
 
 export default function AboutPage() {
@@ -43,11 +43,11 @@ export default function AboutPage() {
               <BizKimizText />
 
               <div className="flex items-center justify-center">
-                <div className="w-full max-w-sm h-64 md:h-80 rounded-2xl bg-gradient-to-br from-amber-100 to-amber-50 shadow-lg flex items-center justify-center p-6 overflow-hidden">
+                <div className="w-full max-w-md h-64 md:h-80 rounded-2xl shadow-lg overflow-hidden">
                   <img
-                    src={logoImg}
-                    alt="BalİZ Parmak Kulübü logosu"
-                    className="max-h-full w-auto object-contain"
+                    src={anitkabirImg}
+                    alt="Anıtkabir'de Çukurova Üniversitesi çelengini taşıyan askerler ve arkalarında yürüyen BalİZ Parmak Kulübü üyeleri"
+                    className="h-full w-full object-cover"
                   />
                 </div>
               </div>
