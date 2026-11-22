@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { quizzes } from './quizData'
+import { subjects } from './quizData'
 
 function ChevronRight({ className }: { className?: string }) {
   return (
@@ -14,20 +14,6 @@ function ChevronRight({ className }: { className?: string }) {
     >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
     </svg>
-  )
-}
-
-function SoonItem({ label }: { label: string }) {
-  return (
-    <li>
-      <div
-        className="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3 text-slate-400 cursor-not-allowed"
-        aria-disabled="true"
-      >
-        <span className="font-medium">{label}</span>
-        <span className="text-xs rounded-full bg-white/10 px-2 py-0.5">Yakında</span>
-      </div>
-    </li>
   )
 }
 
@@ -53,30 +39,30 @@ export default function QuizListPage() {
       <section aria-label="Dersler" className="pb-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 items-start">
-            {quizzes.map((quiz) => {
-              const isOpen = openId === quiz.id
-              const panelId = `ders-${quiz.id}`
+            {subjects.map((subject) => {
+              const isOpen = openId === subject.id
+              const panelId = `ders-${subject.id}`
               return (
                 <div
-                  key={quiz.id}
+                  key={subject.id}
                   className="glass rounded-2xl overflow-hidden shadow-lg transition-all duration-300"
                 >
                   <button
                     type="button"
-                    onClick={() => setOpenId(isOpen ? null : quiz.id)}
+                    onClick={() => setOpenId(isOpen ? null : subject.id)}
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     className="group block w-full text-left"
                   >
-                    <div className={`h-40 flex items-center justify-center bg-gradient-to-br ${quiz.gradient}`}>
+                    <div className={`h-40 flex items-center justify-center bg-gradient-to-br ${subject.gradient}`}>
                       <span className="text-6xl" role="img" aria-hidden="true">
-                        {quiz.icon}
+                        {subject.icon}
                       </span>
                     </div>
                     <div className="p-6 flex items-center justify-between">
                       <div>
                         <h2 className="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
-                          {quiz.subject}
+                          {subject.name}
                         </h2>
                         <p className="text-slate-400 text-sm mt-1">
                           Denemeler ve konu anlatımı
@@ -90,23 +76,33 @@ export default function QuizListPage() {
 
                   {isOpen && (
                     <ul id={panelId} className="px-6 pb-6 space-y-2">
-                      <li>
-                        <Link
-                          to={`/kutuphane/deneme/${quiz.id}`}
-                          className="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-amber-500/20 hover:text-amber-300 transition-colors"
-                        >
-                          <span className="font-medium">
-                            Deneme 1{' '}
-                            <span className="text-slate-400 text-sm font-normal">
-                              · {quiz.questionCount} Soru
+                      {subject.quizzes.map((quiz) => (
+                        <li key={quiz.id}>
+                          <Link
+                            to={`/kutuphane/deneme/${quiz.id}`}
+                            className="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-amber-500/20 hover:text-amber-300 transition-colors"
+                          >
+                            <span className="font-medium">
+                              {quiz.label}{' '}
+                              <span className="text-slate-400 text-sm font-normal">
+                                · {quiz.questions.length} Soru
+                              </span>
                             </span>
-                          </span>
-                          <ChevronRight className="h-4 w-4" />
-                        </Link>
-                      </li>
-                      {/* TODO: Ses dosyaları gelince Deneme 2 ve Konu Anlatımı bağlanacak */}
-                      <SoonItem label="Deneme 2" />
-                      <SoonItem label="Konu Anlatımı" />
+                            <ChevronRight className="h-4 w-4" />
+                          </Link>
+                        </li>
+                      ))}
+                      {subject.lectureUrl && (
+                        <li>
+                          <Link
+                            to={`/kutuphane/konu/${subject.id}`}
+                            className="flex items-center justify-between rounded-xl bg-white/10 px-4 py-3 text-white hover:bg-amber-500/20 hover:text-amber-300 transition-colors"
+                          >
+                            <span className="font-medium">Konu Anlatımı</span>
+                            <ChevronRight className="h-4 w-4" />
+                          </Link>
+                        </li>
+                      )}
                     </ul>
                   )}
                 </div>

@@ -30,6 +30,23 @@
 - [ ] Deneme listesinde "Yakında" yerine gerçek Deneme 2 / Konu Anlatımı bağlantıları
 - [ ] Konu anlatımı için basit sesli oynatıcı sayfası (hız ayarı ile)
 
+## Cevap anahtarı (cevap kayıtları Whisper ile dinlendi, 22.11.2026)
+| Deneme | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Coğrafya 1 | C | B | D | D | D | C | A | D | B | C |
+| Genel Kültür 1 | B | C | B | C | B | B | C | B | B | B |
+| Genel Kültür 2 | B | D | B | A | B | C | E | C | C | B |
+| Matematik 1 | B | B | C | C | E | C | B | B | B | C |
+| Matematik 2 | B | C | D | D | C | C | C | D | D | C |
+| Tarih 1 | B | B | C | C | A | B | C | C | A | B |
+| Tarih 2 | B | C | C | A | B | C | A | C | B | B |
+| Türkçe 1 | C | D | B | E | A | E | B | D | E | D |
+
+- GK1 S9: Kulüp kararıyla B (verilen cevap). Not: soru Everest'i soruyor, Himalaya C şıkkında.
+- Mat2 S6: C — kullanıcı kaydı dinleyip teyit etti.
+- Tarih 1 soru kayıtlarında okunan soru numaraları 1 kayık (2. dosya "Soru 3" diyor).
+- Sitedeki eski .aac kayıtları farklı sorular; mevcut cevapları (C,E,C / E,D,C,A,E / C,E,B,E,A) kayıtlarla doğrulandı.
+
 ## Açık sorular
 1. **Cevap anahtarı:** Sesleri dinleyemiyorum; her denemenin 10 sorusunun doğru şıkkı (A–E) lazım. Mevcut kodda yalnızca Coğrafya 1 (ilk 3), Genel Kültür 1 ve Matematik 1 (ilk 5) var.
 2. **Ana sayfa "Biz Kimiz"** mesajı WhatsApp'ta kesik ("Devamını okuyun"). Tam metni yapıştırabilir misin? Yoksa Hakkımızda'daki yeni Biz Kimiz + Vizyon/Misyon metnini ana sayfada da kullanayım mı?

@@ -14,6 +14,7 @@ import ManagementPage from './pages/Management/ManagementPage'
 import LibraryPage from './pages/Library/LibraryPage'
 import QuizListPage from './pages/Quiz/QuizListPage'
 import QuizPlayPage from './pages/Quiz/QuizPlayPage'
+import LecturePage from './pages/Quiz/LecturePage'
 import GoalSelectPage from './pages/Panel/GoalSelectPage'
 import PanelPage from './pages/Panel/PanelPage'
 import ProtectedRoute from './components/auth/ProtectedRoute'
@@ -37,6 +38,7 @@ export const router = createBrowserRouter([
       { path: '/kutuphane/panel', element: <ProtectedRoute><PanelPage /></ProtectedRoute> },
       { path: '/kutuphane/denemeler', element: <QuizListPage /> },
       { path: '/kutuphane/deneme/:quizId', element: <QuizPlayPage /> },
+      { path: '/kutuphane/konu/:subjectId', element: <LecturePage /> },
       { path: '/yonetim', element: <ManagementPage /> },
       { path: '/duyurular', element: <AnnouncementsPage /> },
       { path: '/duyurular/:id', element: <AnnouncementDetailPage /> },
