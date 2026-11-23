@@ -45,15 +45,15 @@ export default function Header() {
           <Link
             to="/"
             className="flex items-center gap-3 hover:opacity-90 transition-opacity"
-            aria-label="Baliz Parmak Ana Sayfa"
+            aria-label="BALiz Parmak Ana Sayfa"
           >
             <img
               src={logoImg}
-              alt="BalİZ Parmak Kulübü logosu"
+              alt="BALiz Parmak Kulübü logosu"
               className="h-24 w-auto object-contain"
             />
             <span className="text-lg font-bold text-white hidden sm:block">
-              BALİZ PARMAK KULÜBÜ
+              BALiz PARMAK KULÜBÜ
             </span>
           </Link>
 

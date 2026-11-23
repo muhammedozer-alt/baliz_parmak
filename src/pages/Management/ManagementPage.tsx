@@ -54,16 +54,18 @@ function MemberCard({ member, size = 'md' }: { member: Member; size?: 'lg' | 'md
       </div>
       <h3 className={`${nameSize} font-bold text-white mb-1`}>{member.isim}</h3>
       <p className="text-amber-400 text-sm mb-3">{member.pozisyon}</p>
-      <a
-        href={member.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1.5 text-slate-400 hover:text-amber-400 transition-colors text-sm"
-        aria-label={`${member.isim} LinkedIn profili`}
-      >
-        <LinkedInIcon />
-        LinkedIn
-      </a>
+      {member.linkedin && (
+        <a
+          href={member.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-slate-400 hover:text-amber-400 transition-colors text-sm"
+          aria-label={`${member.isim} LinkedIn profili`}
+        >
+          <LinkedInIcon />
+          LinkedIn
+        </a>
+      )}
     </div>
   )
 }
@@ -94,7 +96,7 @@ export default function ManagementPage() {
             Yönetim Kadromuz
           </h1>
           <p className="mt-4 text-lg text-slate-300">
-            BalİZ Parmak Kulübü'nü yöneten ekibimizle tanışın
+            BALiz Parmak Kulübü'nü yöneten ekibimizle tanışın
           </p>
         </div>
       </section>

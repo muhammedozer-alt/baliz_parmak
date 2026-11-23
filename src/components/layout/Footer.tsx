@@ -80,11 +80,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-lg font-bold text-white mb-3">
-              BALİZ PARMAK KULÜBÜ
+              BALiz PARMAK KULÜBÜ
             </h3>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Çukurova Üniversitesi'nde engelleri aşan, ilham veren öğrenci
-              kulübü. Güncel duyurular ve haberler için tek adres.
+              Çukurova Üniversitesi'nde İZ bırakan, birlikte değer üreten
+              öğrenci kulübü
             </p>
           </div>
 
@@ -138,7 +138,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="mt-8 text-center text-xs text-slate-500">
-          &copy; {new Date().getFullYear()} BalİZ Parmak Kulübü. Tüm hakları
+          &copy; {new Date().getFullYear()} BALiz Parmak Kulübü. Tüm hakları
           saklıdır.
         </p>
       </div>

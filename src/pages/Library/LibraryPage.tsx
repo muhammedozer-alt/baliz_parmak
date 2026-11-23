@@ -36,7 +36,7 @@ export default function LibraryPage() {
                 <span className="text-amber-400">BİLGİYE ENGELSİZ ERİŞİM</span>
               </h1>
               <p className="mt-6 text-lg text-slate-300 leading-relaxed">
-                Ozan Bayır Erişilebilir Dijital Kütüphanesi — BALİZ Parmak
+                Ozan Bayır Erişilebilir Dijital Kütüphanesi — BALiz Parmak
                 Tarafından Hayata Geçirildi.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -103,7 +103,7 @@ export default function LibraryPage() {
                 </p>
                 <p className="italic">Bir Hayalin İzinde, Erişilebilir Bir Geleceğe…</p>
                 <p>
-                  Ozan Bayır’ın herkes için erişilebilir bilgi hayali, BALİZ Parmak
+                  Ozan Bayır’ın herkes için erişilebilir bilgi hayali, BALiz Parmak
                   Kulübü’ndeki ekip arkadaşları tarafından sahiplenilerek
                   geliştirilmiş ve kalıcı bir projeye dönüştürülmüştür.
                 </p>
@@ -115,7 +115,7 @@ export default function LibraryPage() {
               </div>
             </div>
 
-            {/* BALİZ Hayali */}
+            {/* BALiz Hayali */}
             <div
               className="relative rounded-2xl overflow-hidden shadow-xl"
               style={{
@@ -131,7 +131,7 @@ export default function LibraryPage() {
 
               <div className="relative p-8 flex flex-col h-full min-h-[22rem]">
                 <h3 className="text-2xl font-bold text-white mb-3">
-                  BALİZ Hayali
+                  BALiz Hayali
                 </h3>
                 <div className="space-y-3 text-slate-200 leading-relaxed text-sm mb-auto">
                   <p className="font-semibold text-white uppercase tracking-wide">
@@ -141,7 +141,7 @@ export default function LibraryPage() {
                     Bir Hayalin, Bir Emeğin ve Kalıcı Bir Mirasın Hikâyesi
                   </p>
                   <p>
-                    Ozan Bayır, BALİZ Parmak Kulübü’nün kurucularından biri olarak,
+                    Ozan Bayır, BALiz Parmak Kulübü’nün kurucularından biri olarak,
                     Adıyaman’da başlayan kuruluş sürecinden itibaren kulübün
                     gelişimine büyük emek vermiştir.
                   </p>

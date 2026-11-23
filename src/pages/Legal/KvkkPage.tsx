@@ -14,7 +14,7 @@ export default function KvkkPage() {
             1. Veri Sorumlusu
           </h2>
           <p>
-            Çukurova Üniversitesi BalİZ Parmak Kulübü olarak kişisel verilerinizin
+            Çukurova Üniversitesi BALiz Parmak Kulübü olarak kişisel verilerinizin
             korunmasına önem veriyoruz. Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin
             Korunması Kanunu (KVKK) kapsamında hazırlanmıştır.
           </p>

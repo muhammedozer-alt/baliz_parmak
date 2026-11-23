@@ -56,3 +56,42 @@
 
 ## Doğrulama
 - `npm run build` + tarayıcıda Ana Sayfa, Hakkımızda, Kütüphane, Denemeler sayfaları
+
+---
+
+# Kulüp cevabı (22.11.2026, 19:46–20:47)
+
+## Hemen yapılabilir
+- [x] **Hakkımızda = Ana Sayfa:** Biz Kimiz kısmında ana sayfadaki kısa metin (2 paragraf) ve ana sayfadaki Vizyon/Misyon kullanılacak. Uzun `BizKimizText` ve Hakkımızda'ya özel Vizyon/Misyon kaldırılacak. "Bizi Tanıyın" zaten `/hakkimizda`'ya gidiyor; ayrı bir sayfa yok.
+- [x] **Kulüp adı her yerde "BALiz Parmak":** BalİZ / BALİZ geçen her yer değişecek: başlık, alt bilgi, Hakkımızda, Yönetim, SSS, KVKK, Sözleşme, Kütüphane ("BALİZ Hayali" → "BALiz Hayali"), duyurular, alt metinler.
+  - Büyük harfli logo yazısı "BALİZ PARMAK KULÜBÜ" → "BALiz PARMAK KULÜBÜ"
+  - Dergi adı **"BalİZ Macera"** kulüp adı değil, aynen kalacak
+  - `tasks/lessons.md` ve hafızadaki "dokunma" kuralı bu isteğe göre güncellenecek
+- [x] **Alt bilgi sloganı** → "Çukurova Üniversitesi'nde İZ bırakan, birlikte değer üreten öğrenci kulübü."
+- [x] **Yönetim kadrosu** (`managementData.ts`): diğerleri silinecek, sadece şu 11 kişi kalacak:
+  1. Ömer Öksüzaşıkı (Başkan)
+  2. Umut Çabuk (Başkan Yardımcısı)
+  3. Fatma Zeynep Akçalı (Başkan Yardımcısı)
+  4. Furkan Selim Gönç (İdari İşler Sorumlusu)
+  5. Kardelen Küsgün (Sayman)
+  6. Işıl Kartal (Sponsorluk)
+  7. Cemre Fırıncıoğulları (Sosyal Medya)
+  8. Rümeysa Gülistan Altay (Organizasyon)
+  9. Büşra Yeşilyurt (Yazman)
+  10. Mert Benli (Denetim Kurulu Üyesi)
+  11. Necati Dilek (Denetim Kurulu Üyesi)
+  - Görseli olmayanlarda baş harf gösterilecek.
+  - Mevcut LinkedIn adresleri olanlarda korunacak.
+- [x] **Anıtkabir duyurusu:** "BALiz Parmak Kulübü'nden 1. Yılında Anıtkabir'e Anlamlı Ziyaret", metin harfi harfine ve `anitkabir.jpeg` ile.
+- [x] Biz Kimiz'deki Anıtkabir görseli yerinde kalacak.
+- [x] E-posta (`balparmakkulubu@gmail.com`) doğru, değişmeyecek.
+
+## Bekleyen (kulüpten / Drive'dan)
+- [x] **Drive görselleri:** yönetim fotoğrafları (Ömer, Umut, Furkan, Kardelen, Mert Benli, Necati) ve yeni duyuru görselleri. Drive'a erişimim yok; dosyalar `public/images/` altına indirilmeli.
+- [ ] **Yeni duyurular:** metinleri ve görselleriyle gelecek.
+- [ ] **Ses kayıtları:** Tarih denemesi dahil bu akşam yeniden kaydedilecek. Gelince Whisper ile tekrar dinlenip cevap anahtarı güncellenecek.
+
+- 23.11.2026 zip'i: 6 yönetim + 11 duyuru görseli eklendi; ses dosyaları önceki zip ile birebir aynı (yeni kayıt yok).
+
+## Açık soru
+- **Anıtkabir duyurusu sabitlensin mi?** 19:46 mesajında "en üstte sabit dursun" deniyor, 19:48 mesajında "başta durmasın" deniyor. Şimdilik sabitleme yok; en yeni tarihli olduğu için zaten en üstte.

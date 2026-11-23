@@ -12,3 +12,7 @@
 - **İkinci hata:** "BALiz → BalİZ" değişikliğini `sed` ile tüm `src`'ye uyguladım ve duyurulardaki özgün "BALiz" yazımları da değişti.
   Toplu değiştirmeyi yalnızca hedef dosya/satırlara uygula, sonra `git grep HEAD` ile karşılaştır.
 - **Uygulama:** Yazım taramasında özel isimleri listele ve dokunmadan geç; emin değilsen sor.
+
+## Güncelleme: kulüp adı artık her yerde "BALiz Parmak" (22.11.2026)
+- Kulüp kararıyla tüm BalİZ / BALİZ kulüp adları "BALiz Parmak" yapıldı. Yukarıdaki "dokunma" kuralının yerine bu geçer.
+- "BalİZ Macera" dergi adıdır, kulüp adı değil; aynen kalır.

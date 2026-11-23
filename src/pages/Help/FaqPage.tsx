@@ -29,7 +29,7 @@ const faqItems = [
   {
     question: 'Platform ücretsiz mi?',
     answer:
-      'Evet, BalİZ Parmak Eğitim Platformu tamamen ücretsizdir ve kâr amacı gütmez.',
+      'Evet, BALiz Parmak Eğitim Platformu tamamen ücretsizdir ve kâr amacı gütmez.',
   },
 ]
 

@@ -7,8 +7,7 @@ import {
   AcademicCapIcon,
   HandRaisedIcon,
 } from '@heroicons/react/24/outline'
-import anitkabirImg from '../../assets/anitkabir.jpeg'
-import BizKimizText from '../../components/content/BizKimizText'
+import BizKimizContent from '../../components/content/BizKimizContent'
 
 export default function AboutPage() {
   return (
@@ -23,78 +22,22 @@ export default function AboutPage() {
             Hakkımızda
           </h1>
           <p className="mt-4 text-lg text-slate-300">
-            Çukurova Üniversitesi BalİZ Parmak Kulübü'nü yakından tanıyın
+            Çukurova Üniversitesi BALiz Parmak Kulübü'nü yakından tanıyın
           </p>
         </div>
       </section>
 
-      {/* Biz Kimiz? */}
+      {/* Biz Kimiz? (Ana Sayfa ile aynı içerik) */}
       <section aria-labelledby="kimiz-heading" className="pb-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="glass-light rounded-2xl p-8 shadow-xl lg:p-12">
             <h2
               id="kimiz-heading"
-              className="text-3xl font-bold text-slate-900 mb-6"
+              className="text-3xl font-bold text-slate-900 text-center mb-6"
             >
               Biz Kimiz?
             </h2>
-
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-              <BizKimizText />
-
-              <div className="flex items-center justify-center">
-                <div className="w-full max-w-md h-64 md:h-80 rounded-2xl shadow-lg overflow-hidden">
-                  <img
-                    src={anitkabirImg}
-                    alt="Anıtkabir'de Çukurova Üniversitesi çelengini taşıyan askerler ve arkalarında yürüyen BalİZ Parmak Kulübü üyeleri"
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vizyon & Misyon */}
-      <section aria-labelledby="vizyon-misyon-heading" className="pb-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 id="vizyon-misyon-heading" className="sr-only">
-            Vizyon ve Misyon
-          </h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            <div className="glass rounded-2xl p-8 shadow-xl">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/20 mb-4">
-                <AcademicCapIcon className="h-6 w-6 text-amber-400" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Vizyonumuz</h3>
-              <p className="text-slate-300 italic leading-relaxed">
-                Birlikte hareket etmenin gücüne inanan; bilgili, kültürlü,
-                çalışkan ve kendini sürekli geliştiren gençlerin öncülüğünde,
-                topluma değer katan, iyiliği çoğaltan ve gelecek nesillere kalıcı,
-                tatlı izler bırakan örnek bir öğrenci topluluğu olmak.
-              </p>
-            </div>
-
-            <div className="glass rounded-2xl p-8 shadow-xl">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-500/20 mb-4">
-                <HeartIcon className="h-6 w-6 text-amber-400" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Misyonumuz</h3>
-              <div className="space-y-3 text-slate-300 leading-relaxed">
-                <p>
-                  Gençlerin bilgi, yetenek ve yaratıcılıklarını geliştirmelerine
-                  fırsat sunmak; eğitim, kültür, sanat, teknoloji ve sosyal
-                  sorumluluk alanlarında yenilikçi projeler hayata geçirmek.
-                </p>
-                <p>
-                  Sevgi, saygı, gönüllülük ve dayanışma ilkeleriyle birlikte
-                  öğrenen, üreten ve gelişen gençleri bir araya getirerek fırsat
-                  eşitliğini güçlendirmek, toplumsal fayda oluşturmak ve
-                  dokunduğumuz her hayatta tatlı bir iz bırakmak.
-                </p>
-              </div>
-            </div>
+            <BizKimizContent />
           </div>
         </div>
       </section>

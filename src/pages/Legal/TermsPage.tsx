@@ -14,7 +14,7 @@ export default function TermsPage() {
             1. Genel Hükümler
           </h2>
           <p>
-            BalİZ Parmak Eğitim Platformu, Çukurova Üniversitesi BalİZ Parmak
+            BALiz Parmak Eğitim Platformu, Çukurova Üniversitesi BALiz Parmak
             Kulübü tarafından kâr amacı gütmeksizin işletilmektedir. Platform
             ticari amaçla kullanılamaz.
           </p>
