@@ -76,13 +76,20 @@ export const members: Member[] = [
   },
   {
     id: 9,
-    isim: 'Büşra Yeşilyurt',
-    pozisyon: 'Yazman',
+    isim: 'Fatma Başboğa',
+    pozisyon: 'Organizasyon',
     hiyerarsi: 3,
     sira_no: 6,
   },
   {
     id: 10,
+    isim: 'Büşra Yeşilyurt',
+    pozisyon: 'Yazman',
+    hiyerarsi: 3,
+    sira_no: 7,
+  },
+  {
+    id: 11,
     isim: 'Mert Benli',
     pozisyon: 'Denetim Kurulu Üyesi',
     foto: '/images/yonetim/mert-benli.jpeg',
@@ -90,7 +97,7 @@ export const members: Member[] = [
     sira_no: 1,
   },
   {
-    id: 11,
+    id: 12,
     isim: 'Necati Dilek',
     pozisyon: 'Denetim Kurulu Üyesi',
     foto: '/images/yonetim/necati-dilek.jpeg',
